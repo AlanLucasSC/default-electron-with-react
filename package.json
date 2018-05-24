@@ -1,0 +1,31 @@
+{
+  "name": "default-electron-with-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-scripts": "1.1.4"
+  },
+  "main": "src/electron.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "dev": "nf start",
+    "production": "npm run build && npm run electron",
+    "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
+    "package": "rm -r MyApp-linux-x64 && electron-packager . MyApp --ignore=node_modules/electron-*",
+    "package-app": "asar pack MyApp-linux-x64/resources/app MyApp-linux-x64/resources/app.asar && rm -r MyApp-linux-x64/resources/app",
+    "export": "npm run build && npm run package && npm run package-app"
+  },
+  "devDependencies": {
+    "asar": "^0.14.3",
+    "electron": "^2.0.2",
+    "electron-packager": "^12.1.0",
+    "foreman": "^3.0.0"
+  }
+}
