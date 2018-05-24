@@ -1,3 +1,3 @@
 # Pasta vazia!
 
-Aplicação rodando no ** Linux x64 **
+Aplicação rodando no **Linux x64**
